@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gudauri Rides — Ski, Snowboard & Mountain Adventures</title>
+<meta name="description" content="Gudauri ski rental, ski and snowboard instructors, paragliding, snowmobile tours and apartment booking.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap');
+:root{--navy:#061925;--navy2:#0b2637;--blue:#123a52;--red:#f21f35;--white:#fff;--muted:#c8d4dc;--line:rgba(255,255,255,.16);--card:rgba(6,25,37,.88)}
+*{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;background:var(--navy);color:#fff;line-height:1.5}
+a{text-decoration:none;color:inherit} button,input,select,textarea{font:inherit}
+.container{width:min(1180px,92%);margin:auto}
+.nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(4,20,30,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
+.logo-mark{font-size:31px;line-height:1}.logo small{display:block;font-size:11px;line-height:1.1}
+.links{display:flex;gap:30px;font-size:13px;color:#e8eef2}.links a:hover{color:#fff}
+.lang{display:flex;gap:12px;align-items:center;font-size:12px}
+.flag{width:22px;height:15px;border-radius:2px;object-fit:cover}
+.hero{min-height:760px;display:flex;align-items:center;position:relative;background:linear-gradient(90deg,rgba(4,20,30,.83),rgba(4,20,30,.22)),url("https://images.unsplash.com/photo-1551524164-6cf2ac5317c6?auto=format&fit=crop&w=1800&q=85") center/cover}
+.hero .content{padding-top:75px;max-width:690px}.script{font-family:Kalam,cursive}
+h1{font-size:76px;line-height:.98;margin:20px 0 22px}.hero p{font-size:18px;max-width:580px;color:#eef4f7}
+.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:3px;color:#dbe5eb}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--red);padding:13px 21px;border-radius:4px;font-weight:700;border:0;color:#fff;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.hero .btn{margin-top:28px}
+.service-bar{margin-top:-82px;position:relative;z-index:3}.service-grid{display:grid;grid-template-columns:repeat(5,1fr);background:rgba(5,24,37,.95);border:1px solid var(--line);box-shadow:0 20px 45px rgba(0,0,0,.3)}
+.service{padding:26px 12px;text-align:center;border-right:1px solid var(--line);cursor:pointer}.service:last-child{border:0}.service:hover{background:#0d3045}.icon{font-size:29px;display:block;margin-bottom:9px}.service span{font-size:13px;font-weight:600}
+section{padding:105px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:45px}.section-head h2{font-size:48px;line-height:1}.section-head p{max-width:520px;color:var(--muted)}
+.dark{background:#071d2b}.light{background:#f3f5f6;color:#10202a}.light .section-head p{color:#53616a}
+.grid2{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.photo{min-height:430px;border-radius:3px;background-position:center;background-size:cover;box-shadow:0 18px 40px rgba(0,0,0,.22)}
+.rental-photo{background-image:url("https://images.unsplash.com/photo-1486911278844-a81c5267e227?auto=format&fit=crop&w=1200&q=85")}
+.instructor-photo{background-image:url("https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&w=1200&q=85")}
+.parag-photo{background-image:url("https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1200&q=85")}
+.snow-photo{background-image:url("https://images.unsplash.com/photo-1517825738774-7de9363ef735?auto=format&fit=crop&w=1200&q=85")}
+.apt-photo{background-image:url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85")}
+.copy h3{font-size:30px;margin-bottom:12px}.copy p{color:var(--muted);margin-bottom:24px}.light .copy p{color:#53616a}
+.price{margin:25px 0;border-top:1px solid var(--line)}.light .price{border-color:#d5dce0}.row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);font-size:14px}.light .row{border-color:#d5dce0}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:25px 0}.feature{padding:15px;border:1px solid var(--line);border-radius:4px}.feature b{display:block;font-size:13px}.feature small{color:var(--muted)}.light .feature small{color:#65737c}
+.booking{background:linear-gradient(135deg,#09273a,#061923);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.formbox{background:#0a2232;border:1px solid var(--line);padding:30px;border-radius:5px}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.field label{display:block;font-size:12px;color:#c6d2da;margin-bottom:7px}.field input,.field select,.field textarea{width:100%;background:#061925;color:#fff;border:1px solid #315064;padding:12px;border-radius:4px;outline:0}.field.full{grid-column:1/-1}.field textarea{min-height:110px;resize:vertical}
+.about{background:linear-gradient(90deg,rgba(5,22,33,.92),rgba(5,22,33,.55)),url("https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1800&q=85") center/cover}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}.contact-card{padding:28px;background:#0a2232;border:1px solid var(--line);border-radius:4px}.contact-item{display:flex;gap:15px;margin:18px 0}.map{min-height:330px;background:linear-gradient(rgba(6,25,37,.2),rgba(6,25,37,.5)),url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1000&q=80") center/cover;display:grid;place-items:center}
+.footer{padding:40px 0;background:#04151f;border-top:1px solid var(--line)}.footerin{display:flex;justify-content:space-between;gap:20px;color:#aebbc3;font-size:13px}
+.toast{position:fixed;right:25px;bottom:25px;background:#102e41;border:1px solid #3b596a;padding:15px 20px;border-radius:5px;display:none;z-index:30}
+@media(max-width:850px){h1{font-size:52px}.links{display:none}.hero{min-height:680px}.service-grid{grid-template-columns:repeat(2,1fr)}.service{border-bottom:1px solid var(--line)}.grid2,.contact-grid{grid-template-columns:1fr}.section-head{display:block}.section-head h2{margin-bottom:15px}.formgrid{grid-template-columns:1fr}.features{grid-template-columns:1fr}.footerin{display:block}.footerin>*{margin-bottom:12px}}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="container navin">
+<a href="#home" class="logo"><span class="logo-mark">⌃</span><span>GUDAURI<br><small>RIDES</small></span></a>
+<div class="links"><a href="#rental">Rental</a><a href="#instructor">Instructor</a><a href="#paragliding">Paragliding</a><a href="#snowmobile">Snowmobile</a><a href="#apartment">Apartment</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+<div class="lang"><span>EN</span><span>🇬🇪</span><span>🇷🇺</span></div>
+</div></nav>
+
+<header id="home" class="hero"><div class="container"><div class="content">
+<div class="eyebrow">Gudauri · Georgia</div>
+<h1 class="script">Gudauri<br>More than just<br>skiing</h1>
+<p>Ski rental · Instructors · Paragliding<br>Snowmobiles · Apartments</p>
+<a href="#booking" class="btn">Book Now →</a>
+</div></div></header>
+
+<div class="service-bar"><div class="container service-grid">
+<a class="service" href="#rental"><span class="icon">⛷</span><span>Ski Rental</span></a>
+<a class="service" href="#instructor"><span class="icon">♟</span><span>Instructors</span></a>
+<a class="service" href="#paragliding"><span class="icon">◈</span><span>Paragliding</span></a>
+<a class="service" href="#snowmobile"><span class="icon">⌁</span><span>Snowmobile</span></a>
+<a class="service" href="#apartment"><span class="icon">⌂</span><span>Apartment</span></a>
+</div></div>
+
+<section id="rental" class="light"><div class="container grid2"><div class="photo rental-photo"></div><div class="copy">
+<div class="eyebrow">01 · Equipment</div><h2 class="script" style="font-size:54px">Ski & Snowboard Rental</h2><p>Quality equipment. Great slopes. No hassle. Choose skis, snowboards, boots, helmets and goggles for your day in Gudauri.</p>
+<div class="price"><div class="row"><span>Skis + Boots</span><b>50 GEL / day</b></div><div class="row"><span>Snowboard + Boots</span><b>50 GEL / day</b></div><div class="row"><span>Helmet</span><b>10 GEL / day</b></div><div class="row"><span>Goggles</span><b>10 GEL / day</b></div></div>
+<a class="btn" href="#booking">Book Rental →</a></div></div></section>
+
+<section id="instructor"><div class="container grid2"><div class="copy"><div class="eyebrow">02 · Coaching</div><h2 class="script" style="font-size:54px">Ski & Snowboard Instructor</h2><p>Learn. Improve. Explore. From your first turns to freeride adventures, lessons are built around your level and safety.</p>
+<div class="features"><div class="feature">◉ <b>Beginner</b><small>First steps, basic skills</small></div><div class="feature">◉ <b>Intermediate</b><small>Technique & control</small></div><div class="feature">◉ <b>Freeride</b><small>Off-piste, advanced</small></div></div>
+<div class="price"><div class="row"><span>1 hour</span><b>150 GEL</b></div><div class="row"><span>2 hours</span><b>280 GEL</b></div><div class="row"><span>3 hours</span><b>400 GEL</b></div><div class="row"><span>Full day (10:00–17:00)</span><b>720 GEL</b></div><div class="row"><span>Off-piste (min 3 hrs)</span><b>600 GEL</b></div></div>
+<a class="btn" href="#booking">Book Instructor →</a></div><div class="photo instructor-photo"></div></div></section>
+
+<section id="paragliding" class="dark"><div class="container grid2"><div class="photo parag-photo"></div><div class="copy"><div class="eyebrow">03 · Fly above Gudauri</div><h2 class="script" style="font-size:54px">Paragliding</h2><p>See Gudauri from a different angle. Tandem paragliding with an experienced pilot — safe, stunning and unforgettable.</p>
+<div class="features"><div class="feature">🪂 <b>Tandem Flights</b><small>Experienced pilots</small></div><div class="feature">📷 <b>Photos & Video</b><small>Capture your flight</small></div><div class="feature">❄ <b>All Seasons</b><small>Weather dependent</small></div></div>
+<div class="price"><div class="row"><span>Tandem flight</span><b>200 GEL</b></div></div><a class="btn" href="#booking">Book Paragliding →</a></div></div></section>
+
+<section id="snowmobile" class="light"><div class="container grid2"><div class="copy"><div class="eyebrow">04 · Mountain tours</div><h2 class="script" style="font-size:54px">Snowmobile</h2><p>Feel the power. Explore the mountains. Guided snowmobile tours for beginners and experienced riders, with spectacular views.</p>
+<div class="features"><div class="feature">◉ <b>Guided</b><small>Local mountain routes</small></div><div class="feature">◈ <b>Off-road</b><small>Snowy landscapes</small></div><div class="feature">◉ <b>Equipment</b><small>Helmet included</small></div></div>
+<div class="price"><div class="row"><span>1 hour</span><b>150 GEL</b></div><div class="row"><span>2 hours</span><b>290 GEL</b></div><div class="row"><span>Full day</span><b>400 GEL</b></div></div><a class="btn" href="#booking">Book Snowmobile →</a></div><div class="photo snow-photo"></div></div></section>
+
+<section id="apartment"><div class="container grid2"><div class="photo apt-photo"></div><div class="copy"><div class="eyebrow">05 · Stay in Gudauri</div><h2 class="script" style="font-size:54px">Apartment Booking</h2><p>Cozy, modern accommodation in the heart of Gudauri. Comfortable for a mountain getaway with everything you need.</p>
+<div class="features"><div class="feature">👥 <b>2–6 guests</b><small>Comfortable stay</small></div><div class="feature">🍳 <b>Full kitchen</b><small>Everything you need</small></div><div class="feature">📶 <b>Free Wi‑Fi</b><small>Stay connected</small></div></div>
+<div class="price"><div class="row"><span>From</span><b>80 GEL / night</b></div></div><a class="btn" href="#booking">Check Availability →</a></div></div></section>
+
+<section id="booking" class="booking"><div class="container"><div class="section-head"><div><div class="eyebrow">06 · Reservation</div><h2>Make a Booking</h2></div><p>Choose your service, date and time. Send your request and we'll confirm the details.</p></div>
+<div class="formbox"><form id="bookingForm"><div class="formgrid">
+<div class="field"><label>Service</label><select id="service"><option>Ski Rental</option><option>Snowboard Rental</option><option>Ski Instructor</option><option>Snowboard Instructor</option><option>Paragliding</option><option>Snowmobile</option><option>Apartment</option></select></div>
+<div class="field"><label>Name</label><input required placeholder="Your name"></div>
+<div class="field"><label>Date</label><input required type="date"></div><div class="field"><label>People</label><input type="number" min="1" value="1"></div>
+<div class="field"><label>Phone / WhatsApp</label><input required placeholder="+995 ..."></div><div class="field"><label>Email</label><input type="email" placeholder="you@example.com"></div>
+<div class="field full"><label>Message</label><textarea placeholder="Equipment sizes, lesson level, apartment dates, special requests..."></textarea></div>
+<div class="field full"><button class="btn" type="submit">Send Booking Request →</button></div>
+</div></form></div></div></section>
+
+<section id="about" class="about"><div class="container grid2"><div><div class="eyebrow">07 · About us</div><h2 class="script" style="font-size:64px">Same mountains.<br>New stories.</h2><p style="margin-top:20px;color:#d7e0e5;max-width:560px">We are a local Gudauri team offering high-quality mountain services: equipment rental, professional ski and snowboard instruction, paragliding, snowmobile tours and accommodation.</p></div><div class="contact-card"><div class="contact-item">✓ <span>Professional & certified instructors</span></div><div class="contact-item">✓ <span>High-quality equipment</span></div><div class="contact-item">✓ <span>Friendly & experienced team</span></div><div class="contact-item">✓ <span>Local mountain knowledge</span></div></div></div></section>
+
+<section id="contact" class="dark"><div class="container"><div class="section-head"><div><div class="eyebrow">08 · Get in touch</div><h2>Contact Us</h2></div><p>Have questions? We're here to help with bookings and mountain plans.</p></div>
+<div class="contact-grid"><div class="contact-card"><div class="contact-item">💬 <span><b>WhatsApp / Telegram</b><br>+995 5XX XX XX XX</span></div><div class="contact-item">✉️ <span><b>Email</b><br>info@gudaurirides.ge</span></div><div class="contact-item">📍 <span><b>Location</b><br>Gudauri, Georgia</span></div><div class="contact-item">◎ <span><b>Instagram</b><br>@gudaurirides</span></div></div><div class="map"><a class="btn" href="https://www.google.com/maps/search/Gudauri" target="_blank">Open Gudauri on Maps →</a></div></div></div></section>
+
+<footer class="footer"><div class="container footerin"><div class="logo">⌃ GUDAURI RIDES</div><div>Rental · Instructors · Paragliding · Snowmobile · Apartment</div><div>© 2026 Gudauri Rides</div></div></footer>
+<div class="toast" id="toast">Booking request prepared. Connect this form to WhatsApp, email or a database for real reservations.</div>
+<script>
+document.getElementById('bookingForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ document.getElementById('toast').style.display='block';
+ setTimeout(()=>document.getElementById('toast').style.display='none',4500);
+});
+</script>
+</body></html>
